@@ -987,6 +987,7 @@ h2 {
 }
 
 footer {
+  width: 100%;
   min-width: 480px;
   background: #2f303a;
   margin-top: 60px;
