@@ -1301,6 +1301,7 @@ h2 {
 }
 
 .our-cmnd {
+  min-width: 480px;
   margin-top: 60px;
   padding-top: 60px;
   padding-bottom: 60px;
@@ -1555,6 +1556,7 @@ h2 {
 }
 
 footer {
+  min-width: 480px;
   background: #2f303a;
   margin-top: 60px;
   padding-top: 60px;
