@@ -1,0 +1,104 @@
+.client-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding-left: 0;
+
+  margin-top: 40px;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 30px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-top: 50px;
+  }
+}
+
+.client-item {
+  width: 450px;
+  height: 404px;
+  padding-bottom: 20px;
+
+  border: 1px solid $client-border-color;
+  transition: $standart-animation;
+
+  @media screen and (min-width: 768px) {
+    width: 354px;
+    height: 404px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 370px;
+    height: 404px;
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+
+  &:hover .overlay,
+  &:focus .overlay {
+    transform: translatey(0);
+  }
+
+  &:not(:nth-child(-n + 1)) {
+    @media screen and (min-width: 480px) and (max-width: 767px) {
+      margin-top: 30px;
+    }
+  }
+
+  &:not(:nth-child(-n + 2)) {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      margin-top: 30px;
+    }
+  }
+
+  &:not(:nth-child(-n + 3)) {
+    @media screen and (min-width: 1200px) {
+      margin-top: 30px;
+    }
+  }
+
+  &:not(:nth-child(2n)) {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      margin-right: 30px;
+    }
+  }
+
+  &:not(:nth-child(3n)) {
+    @media screen and (min-width: 1200px) {
+      margin-right: 30px;
+    }
+  }
+}
+
+.client {
+  text-decoration: none;
+  color: $dark-color;
+}
+
+.client-title {
+  margin: 0;
+  margin-top: 20px;
+  margin-left: 24px;
+  text-align: start;
+
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 36px;
+  letter-spacing: 0.06em;
+}
+
+.client-title-work {
+  margin: 0;
+  margin-left: 24px;
+
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.875;
+  letter-spacing: 0.03em;
+
+  color: $gray-color;
+}
