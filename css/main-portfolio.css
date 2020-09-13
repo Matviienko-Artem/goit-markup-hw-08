@@ -394,6 +394,10 @@ body {
   color: #212121;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 header {
   position: relative;
   border-bottom: 1px solid #ececec;
@@ -757,6 +761,10 @@ h2 {
     font-size: 14px;
     line-height: 1.143;
   }
+}
+
+.contacts-container .navigation-item:hover, .contacts-container .navigation-item:focus {
+  color: #2196f3;
 }
 
 @media screen and (max-width: 767px) {

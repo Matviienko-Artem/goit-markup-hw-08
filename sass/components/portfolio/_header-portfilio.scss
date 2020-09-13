@@ -210,6 +210,11 @@
     line-height: 1.143;
   }
 
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+
   &:not(:first-child) {
     @media screen and (max-width: 767px) {
       margin-top: 16px;
