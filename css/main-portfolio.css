@@ -585,6 +585,7 @@ h2 {
     top: 100%;
     left: 0;
     width: 100%;
+    min-width: 480px;
     background-color: #fff;
     padding-top: 60px;
     padding-bottom: 60px;
@@ -895,7 +896,7 @@ h2 {
           transform: translatey(0);
 }
 
-@media screen and (min-width: 480px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .client-item:not(:nth-child(-n + 1)) {
     margin-top: 30px;
   }

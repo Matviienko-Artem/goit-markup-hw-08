@@ -44,7 +44,7 @@
   }
 
   &:not(:nth-child(-n + 1)) {
-    @media screen and (min-width: 480px) and (max-width: 767px) {
+    @media screen and (max-width: 767px) {
       margin-top: 30px;
     }
   }
