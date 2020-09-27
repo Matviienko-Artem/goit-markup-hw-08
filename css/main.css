@@ -403,6 +403,12 @@ header {
   border-bottom: 1px solid #ececec;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .container {
   min-width: 480px;
   max-width: 1200px;
@@ -1377,11 +1383,6 @@ h2 {
   .team-list:not(:last-child) {
     margin-right: 30px;
   }
-}
-
-.team-img {
-  width: 270px;
-  height: 260px;
 }
 
 .employee {
