@@ -410,7 +410,6 @@ img {
 }
 
 .container {
-  min-width: 480px;
   max-width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
@@ -419,12 +418,6 @@ img {
 }
 
 @media screen and (min-width: 480px) {
-  .container {
-    width: 480px;
-  }
-}
-
-@media screen and (max-width: 767px) {
   .container {
     width: 480px;
   }
@@ -595,7 +588,6 @@ h2 {
     top: 100%;
     left: 0;
     width: 100%;
-    min-width: 480px;
     background-color: #fff;
     padding-top: 60px;
     padding-bottom: 60px;
@@ -800,6 +792,9 @@ h2 {
   margin-right: auto;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.6)), to(rgba(47, 48, 58, 0.6))), url(../images/Header.jpg);
   background-image: linear-gradient(rgba(47, 48, 58, 0.6), rgba(47, 48, 58, 0.6)), url(../images/Header.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 @media screen and (min-width: 1200px) {
@@ -874,8 +869,8 @@ h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 450px;
-  padding: 40px;
+  width: calc(100% - 20px);
+  padding: 40px 20px;
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
   -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -886,9 +881,10 @@ h2 {
   border-radius: 4px;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .modal {
     width: 528px;
+    padding: 40px;
   }
 }
 
@@ -1319,7 +1315,6 @@ h2 {
 
 .our-cmnd {
   width: 100%;
-  min-width: 480px;
   margin-top: 60px;
   padding-top: 60px;
   padding-bottom: 60px;
@@ -1358,6 +1353,13 @@ h2 {
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+}
+
+@media screen and (max-width: 768px) {
+  .team-list {
+    width: 270px;
+    margin: 30px auto;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1467,6 +1469,8 @@ h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   list-style-type: none;
@@ -1476,24 +1480,6 @@ h2 {
 
 .client {
   margin-top: 30px;
-}
-
-@media screen and (max-width: 767px) {
-  .client:nth-child(2n + 1) {
-    margin-right: 30px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .client:not(:nth-child(3n)) {
-    margin-right: 30px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .client:not(:last-child) {
-    margin-right: 30px;
-  }
 }
 
 .client-link {
@@ -1570,11 +1556,11 @@ h2 {
 
 footer {
   width: 100%;
-  min-width: 480px;
   background: #2f303a;
   margin-top: 60px;
   padding-top: 60px;
   padding-bottom: 60px;
+  margin-right: 0;
 }
 
 @media screen and (min-width: 1200px) {
@@ -1778,10 +1764,13 @@ footer {
   padding-left: 16px;
   outline: none;
   background-color: #2f303a;
+  color: #ffffff;
   border: 1px solid rgba(255, 255, 255, 0.3);
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
 }
 
 @media screen and (min-width: 768px) {
@@ -1816,6 +1805,10 @@ footer {
   color: rgba(255, 255, 255, 0.6);
 }
 
+.mail-subscrible:focus {
+  border: 1px solid #2196f3;
+}
+
 .button-subscribe {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1833,6 +1826,7 @@ footer {
   padding: 0;
   margin-top: 20px;
   text-align: center;
+  cursor: pointer;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
@@ -1866,7 +1860,6 @@ footer {
 .button-subscribe-icon::after {
   content: "";
   display: inline-block;
-  height: 24px;
   width: 24px;
   margin-left: 10px;
   background-size: 24px;

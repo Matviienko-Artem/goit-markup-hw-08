@@ -1,5 +1,6 @@
 .client-list {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   margin: 0;
   padding-left: 0;
@@ -15,7 +16,7 @@
 }
 
 .client-item {
-  width: 450px;
+  // width: 450px;
   height: 404px;
   padding-bottom: 20px;
 

@@ -5,8 +5,8 @@
 
   display: flex;
   justify-content: center;
-  width: 450px;
-  padding: 40px;
+  width: calc(100% - 20px);
+  padding: 40px 20px;
 
   transform: translate(-50%, -50%) scale(1);
   transition: $standart-animation;
@@ -16,8 +16,9 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 768px) {
     width: 528px;
+    padding: 40px;
   }
 }
 
